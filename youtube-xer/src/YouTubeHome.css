@@ -1,0 +1,367 @@
+/* Reset CSS */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0f0f0f;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+/* Navbar */
+#navbar {
+  height: 56px;
+  padding: 0 15px; /* Adjust padding for smaller screens */
+  display: flex; /* Change grid to flex for better responsiveness */
+  align-items: center;
+  background-color: #0f0f0f;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
+
+#search-input::placeholder {
+  user-select: none;
+}
+#youtube-logo:hover,
+#microphone-btn:hover,
+#search-btn:hover,
+#hamburger:hover,
+#navbar img:hover,
+#logo-text:hover {
+  cursor: pointer;
+}
+
+
+
+
+#left-side {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex: 1; /* Take remaining space */
+}
+
+#left-side .svg-wrapper {
+  position: relative;
+}
+
+#left-side .svg-wrapper::before {
+  content: '';
+  position: absolute;
+  width: 2.5em;
+  height: 2.5em;
+  margin-left: -0.9em;
+  margin-top: -0.2em;
+  border-radius: 50%;
+  background-color: #666;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: -1;
+}
+
+#left-side .svg-wrapper:hover::before {
+  opacity: 1;
+}
+
+#left-side svg {
+  width: 1.5em;
+  height: 1.5em;
+  margin-left: -0.5em;
+  fill: #ffffff;
+  transition: transform 0.3s;
+  z-index: 1;
+}
+
+#hamburger:hover svg {
+  transform: scale(1.1);
+}
+
+#youtube-logo {
+  height: 7em;
+  width: 7em;
+  margin-left: -2.5em;
+}
+
+#search-place {
+  height: 56px;
+  display: flex;
+  white-space: nowrap; /* Prevent text from wrapping */
+  align-items: center;
+}
+
+#right-side {
+  height: 56px;
+  display: flex;
+  padding: 0 50px 0 0;
+  align-items: center;
+  justify-content: flex-end;
+    align-items: center;
+
+}
+
+#microphone {
+  color: white;
+  font-size: 18px;
+}
+
+#microphone-btn {
+  background-color: #272727;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 50px;
+  margin-left: 5px;
+}
+
+#search-btn {
+  background-color: #222222;
+  border: 1px solid #2e2e2e;
+  margin-left: -4px;
+  height: 42px;
+  width: 63px;
+  border-top-right-radius: 22px;
+  border-bottom-right-radius: 22px;
+}
+
+/* Search input styles */
+#search-input {
+  background-color: #121212;
+  outline: none;
+  border: 1px solid #2e2e2e;
+  height: 40px;
+  width: 530px;
+  color: white;
+  padding: 0 15px;
+  font-size: 16px;
+  border-top-left-radius: 22px;
+  border-bottom-left-radius: 22px;
+  margin-left: 9em;
+
+}
+
+#search-place {
+  height: 56px;
+  display: flex;
+  align-items: center;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: 15% 85%;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+.visible-container {
+  transform: translateX(0);
+}
+
+.hidden-container {
+  transform: translateX(-100%);
+}
+
+/* Left-side action styles (menu) */
+#left-side-action {
+  margin-top: 56px;
+  background-color: #0f0f0f;
+  position: fixed;
+  z-index: 1;
+
+  height: 93vh;
+  overflow-y: auto; /* Use 'auto' instead of 'visible' */
+  overflow-x: hidden;
+  width: 70px;
+}
+
+#left-side-action::-webkit-scrollbar {
+  width: 5px;
+}
+
+#left-side-action::-webkit-scrollbar-thumb {
+  background-color: #262525;
+  border-radius: 5px;
+}
+
+#left-side-action::-webkit-scrollbar-track {
+  background-color: #1d1c1c;
+}
+
+.left-side-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0; /* Removed the negative margin */
+}
+
+.left-side-item > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center content vertically */
+  width: 50px; /* Set a fixed width for the circle */
+  height: 50px; /* Set a fixed height for the circle */
+  padding: 10px; /* Adjusted padding for better spacing */
+  cursor: pointer;
+  border-radius: 50%; /* Make the button circular */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+  position: relative; /* Position relative for absolute positioning of the community icon */
+}
+
+
+
+.left-side-item:hover > div {
+  background-color: #383838; /* Change background color on hover */
+}
+
+.left-side-item p {
+  margin: 0;
+  font-size: 12px; /* Adjusted font size */
+  font-family: 'Arial', sans-serif; /* Simple font family */
+  font-weight: bold; /* Make the text bold */
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Display ellipsis (...) for overflow text */
+  user-select: none; /* Disable text selection */
+}
+
+
+svg {
+  margin-left: 5px;
+}
+
+/* Global styles for the browser scrollbar */
+body::-webkit-scrollbar {
+  width: 6px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #2e2e2e;
+  border-radius: 6px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #0f0f0f;
+}
+
+#hamburger img {
+  width: 5px;
+}
+
+/* Styles for mobile devices */
+@media (max-width: 768px) {
+  #video-cards {
+    flex-direction: column;
+  }
+
+  .video-card {
+    width: calc(100% - 20px); 
+  }
+}
+#video-cards {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  margin-top: 70px; /* Adjust the margin to create space below the search bar */
+}
+
+
+.video-card {
+  width: 300px;
+  height: 200px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.video-card:hover {
+  transform: scale(1.05); /* Enlarge the card on hover */
+}
+
+.video-thumbnail {
+  flex: 1; /* Take remaining space within the card */
+}
+
+.video-info {
+  padding: 15px;
+}
+
+.video-info h3 {
+  margin: 0;
+  font-size: 18px; /* Increase font size for the title */
+}
+
+.video-info p {
+  margin: 8px 0;
+  font-size: 14px; /* Adjust font size for the description */
+  color: #666; /* Darker text color for the description */
+}
+
+
+/* Add these styles to your YouTubeHome.css or update existing ones */
+
+.interaction-buttons {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+
+}
+
+.interaction-buttons svg {
+  vertical-align: middle;
+}
+/* Add these styles to your YouTubeHome.css or update existing ones */
+
+.interaction-button {
+  background-color: transparent;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  font-size: 14px;
+  gap: 5px;
+  display: flex;
+
+}
+.interaction-buttons > * {
+  margin-right: 8px;
+}
+.interaction-button:hover {
+  text-decoration: underline;
+}
+.interaction-buttons svg {
+  vertical-align: middle;
+}
+.announcement-wrapper {
+  position: absolute;
+  top: 70px; /* Adjust according to your layout */
+  left: 90px; /* Adjust according to your layout */
+  width: 90%;
+  max-width: 1100px;
+}
+.announcement-card {
+  width: 1000px;
+  height: 200px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  margin-top: -20px; /* Adjust the margin to create space below the search bar */
+  margin-left: 10px; /* Adjust the margin to create space below the search bar */
+
+}
+
+.announcement-card .announcement-content {
+  flex: 1;
+  padding: 20px;
+}

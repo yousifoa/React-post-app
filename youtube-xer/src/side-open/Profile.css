@@ -1,0 +1,52 @@
+/* Profile.css */
+
+/* Container for the profile layout */
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 100px;
+  }
+  
+  /* Styling for the mini-profile section */
+  .mini-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  
+  .profile-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  /* Styling for the posts section */
+  .posts-section {
+    width: 100%;
+  }
+  
+  .posts-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Styling for individual posts */
+  .post {
+    padding: 10px;
+    background-color: #2b2a2a;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .post h4 {
+    margin-bottom: 5px;
+  }
+  
+  .post p {
+    margin-top: 0;
+  }
+  

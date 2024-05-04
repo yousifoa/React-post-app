@@ -1,0 +1,98 @@
+.LoginForm {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+/* LoginForm.css */
+
+.form {
+  position: relative;
+  width: 350px;
+  padding: 20px 40px 40px; /* Adjusted padding */
+  background: #131419;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.05),
+    5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px; /* Adjusted top position */
+  right: 10px; /* Adjusted right position */
+  cursor: pointer;
+  font-size: 20px;
+  color: #fff;
+}
+
+.form h2 {
+  color: #c7c7c7;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.form .input {
+  text-align: left;
+  margin-top: 20px; /* Adjusted margin-top */
+}
+
+.form .input .inputBox {
+  margin-top: 15px; /* Adjusted margin-top */
+}
+
+.form .input .inputBox label {
+  display: block;
+  color: #868686;
+  margin-bottom: 5px;
+  font-size: 16px; /* Adjusted font-size */
+}
+
+.form .input .inputBox input {
+  width: 100%;
+  height: 40px; /* Adjusted height */
+  background: #131419;
+  border: none;
+  outline: none;
+  border-radius: 30px; /* Adjusted border-radius */
+  padding: 5px 15px;
+  color: #fff;
+  font-size: 16px;
+  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.05),
+    inset 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.form .input .inputBox input[type='submit'] {
+  margin-top: 20px;
+  box-shadow: -2px -2px 6px rgba(255, 255, 255, 0.05),
+    2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.form .input .inputBox input[type='submit']:active {
+  color: #006c9c;
+  margin-top: 20px;
+  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.05),
+    inset 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.form .input .inputBox input::placeholder {
+  color: #555;
+  font-size: 16px; /* Adjusted font-size */
+}
+
+.forget {
+  margin-top: 20px; /* Adjusted margin-top */
+  color: #555;
+}
+
+.forget a {
+  color: #ff0047;
+}
